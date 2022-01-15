@@ -6,20 +6,19 @@ public class Lista {
 
         }
         int suma=0;
-        int resta =0;
         int min= Integer.MAX_VALUE;
         int max= Integer.MIN_VALUE;
-        for (int i = 0; i < args.length ; i++) {
-            int x=0;
+        for (String arg : args) {
+            int x = 0;
             try {
-                x = Integer.parseInt(args[i]);
-            }catch (NumberFormatException ex){
+                x = Integer.parseInt(arg);
+            } catch (NumberFormatException ex) {
                 System.out.println("Error el formato de numeros");
                 System.exit(2);
             }
             min = Math.min(min, x);
             max = Math.max(max, x);
-            suma= suma + x;
+            suma = suma + x;
 
         }
         System.out.println("suma: " + suma);
